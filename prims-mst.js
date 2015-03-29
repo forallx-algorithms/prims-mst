@@ -61,9 +61,7 @@ function primsMst(g) {
       var curEdge = g[ei];
 
       // Is any endpoint of the edge in x (XOR)
-      var isAnyEndpoint = x[curEdge[0]] ? !x[curEdge[1]] : x[curEdge[1]];
-
-      if(isAnyEndpoint) {
+      if( !x[curEdge[0]] != !x[curEdge[1]] ) {
 
         if(minEdge) {
           minEdge = (minEdge[2] > curEdge[2]) ? curEdge : minEdge;
